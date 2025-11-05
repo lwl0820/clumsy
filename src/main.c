@@ -352,6 +352,7 @@ static int uiOnDialogShow(Ihandle *ih, int state) {
         setFromParameter(filterText, "VALUE", "filter");
         LOG("is parameterized, start filtering upon execution.");
         uiStartCb(filterButton);
+        IupSetAttribute(ih, "VISIBLE", "NO");
     }
 
     return exit ? IUP_CLOSE : IUP_DEFAULT;
